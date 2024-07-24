@@ -8,7 +8,7 @@ import { Component, input, Input } from '@angular/core';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-  @Input() Title = ''
+  @Input() Title = ""
   @Input() imageURL = ""
   @Input() description = ""
   @Input() rating = ""
