@@ -1,14 +1,14 @@
 <div class="card">
-  <img src="{{ imageURL }}" alt="Avatar" />
+  <img src="{{ movie.poster }}" alt="Avatar" />
   <div class="container">
     <div class="rating">
       <h4>
-        {{ Title }}
+        {{ movie.name }}
       </h4>
-      <h3>⭐{{ rating }}</h3>
+      <h3>⭐{{ movie.rating }}</h3>
     </div>
     <p>
-      {{ description }}
+      {{ movie.summary }}
     </p>
   </div>
 </div>
