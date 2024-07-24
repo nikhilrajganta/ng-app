@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { CardComponent } from './card/card.component';
 import { Title } from '@angular/platform-browser';
+import { MoviesListComponent } from './movies-list/movies-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, CardComponent],
+  imports: [RouterOutlet, UserComponent, CardComponent,MoviesListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -103,7 +104,7 @@ export class AppComponent {
   //   },
   // ];
 
-  movies = [
+  moviesData = [
     {
       "name": "Vikram",
       "poster": "https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg",
