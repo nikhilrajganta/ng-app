@@ -5,11 +5,12 @@ import { CardComponent } from './card/card.component';
 import { Title } from '@angular/platform-browser';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { CounterComponent } from "./counter/counter.component";
+import { ColorGameComponent } from "./color-game/color-game.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, CardComponent, MoviesListComponent, CounterComponent],
+  imports: [RouterOutlet, UserComponent, CardComponent, MoviesListComponent, CounterComponent, ColorGameComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

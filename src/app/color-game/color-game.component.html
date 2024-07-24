@@ -1,0 +1,9 @@
+<input type="text" [(ngModel)]="color" [style.background]="color" />
+
+<!-- <p style="background: {{ color }}">{{ color }}</p> -->
+
+<button (click)="addColor()">Click Here</button>
+
+@for (colorCode of colorList; track $index) {
+<p style="background: {{ colorCode }}"></p>
+}
