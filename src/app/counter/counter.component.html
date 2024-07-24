@@ -1,0 +1,10 @@
+<div class="btn">
+  <button (click)="clickIn()">✅ {{ like }}</button>
+  <button (click)="clickDe()">❌ {{ disLike }}</button>
+</div>
+
+@if (like - disLike === 10 || like-disLike >= 10) {
+<p>Likes are More</p>
+}
+
+<progress [max]="like + disLike" [value]="like"></progress>

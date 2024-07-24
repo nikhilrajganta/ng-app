@@ -4,11 +4,12 @@ import { UserComponent } from './user/user.component';
 import { CardComponent } from './card/card.component';
 import { Title } from '@angular/platform-browser';
 import { MoviesListComponent } from './movies-list/movies-list.component';
+import { CounterComponent } from "./counter/counter.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, CardComponent,MoviesListComponent],
+  imports: [RouterOutlet, UserComponent, CardComponent, MoviesListComponent, CounterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
