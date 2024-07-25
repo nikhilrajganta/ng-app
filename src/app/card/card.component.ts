@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CounterComponent } from '../counter/counter.component';
 
@@ -14,6 +14,7 @@ import { CounterComponent } from '../counter/counter.component';
 export class CardComponent {
 
   value = true;
+  
 
   @Input() movies ={
     "name": "Vikram",
@@ -24,5 +25,12 @@ export class CardComponent {
 
   hidesummary() {
     this.value = !this.value;
+  }
+
+  i = 0;
+  @Output() deleteItemEvent = new EventEmitter<number>();
+
+  deletefunc(){
+    this.deleteItemEvent.emit();
   }
 }

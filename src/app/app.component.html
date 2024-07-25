@@ -59,10 +59,20 @@
 <!-- <app-movies-list [allmovies]="moviesData"></app-movies-list> -->
 
 <nav>
-  <a href="/">Home </a>
-  <a routerLink="/color-game">Color Game </a>
-  <a routerLink="counter-game">Counter </a>
-  <a routerLink="movie-list">Movie </a>
+  <ul class="nav-list">
+    <li class="nav-item">
+      <a href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/color-game">Color Game</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="counter-game">Counter</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="movie-list">Movie</a>
+    </li>
+  </ul>
 </nav>
 
 <router-outlet />
