@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { CardComponent } from './card/card.component';
 import { Title } from '@angular/platform-browser';
@@ -10,7 +10,7 @@ import { ColorGameComponent } from "./color-game/color-game.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, CardComponent, MoviesListComponent, CounterComponent, ColorGameComponent],
+  imports: [RouterOutlet, UserComponent, CardComponent, MoviesListComponent, CounterComponent, ColorGameComponent,RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
