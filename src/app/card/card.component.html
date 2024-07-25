@@ -4,11 +4,17 @@
     <div class="rating">
       <h4>
         {{ movies.name }}
+        <button class="btn" style="border: none" (click)="hidesummary()">
+          {{ value ? "⇲" : "⇱" }}
+        </button>
       </h4>
       <h3>⭐{{ movies.rating }}</h3>
     </div>
-    <p>
+    @if (value) {
+    <p class="hidebtn">
       {{ movies.summary }}
     </p>
+    }
+    <app-counter />
   </div>
 </div>
