@@ -1,7 +1,18 @@
-import { Component, EventEmitter, Input, Output, output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CounterComponent } from '../counter/counter.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
 
+type movies = {
+  name: string;
+  rating: number;
+  summary: string;
+  poster: string;
+};
 
 
 @Component({
@@ -15,11 +26,10 @@ export class CardComponent {
 
   value = true;
   
-
-  @Input() movies ={
+  @Input() movies = {
     "name": "Vikram",
     "poster": "https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg",
-    "rating": "8.4",
+    "rating": 8.4,
     "summary": "Members of a black ops team must track and eliminate a gang of masked murderers."
   }
 
@@ -27,10 +37,9 @@ export class CardComponent {
     this.value = !this.value;
   }
 
-  i = 0;
-  @Output() deleteItemEvent = new EventEmitter<number>();
+  @Output() deleteItemEvent = new EventEmitter<movies>();
 
   deletefunc(){
-    this.deleteItemEvent.emit();
+    this.deleteItemEvent.emit(this.movies);
   }
 }

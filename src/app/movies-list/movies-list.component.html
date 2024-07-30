@@ -1,5 +1,5 @@
 <div class="movie-list-container">
-  @for (movie of moviesData; track $index) {
-  <app-card [movies]="movie"></app-card>
+  @for (movie of movieService.moviesData; track $index) {
+  <app-card [movies]="movie" (deleteItemEvent)="deleteMovie($event)"></app-card>
   }
 </div>
