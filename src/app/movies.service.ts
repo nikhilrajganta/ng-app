@@ -83,6 +83,10 @@ export class MoviesService {
     return this.moviesData.find(movie => movie.id == id);
   }
 
+  // getALlMovies() : Promise<movies>{
+  //   return 
+  // }
+
 
   constructor() { }
 }
