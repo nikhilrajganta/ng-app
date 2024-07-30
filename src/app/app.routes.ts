@@ -7,6 +7,7 @@ import { CounterComponent } from './counter/counter.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFOundComponent } from './page-not-found/page-not-found.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 export const routes: Routes = [
     {
@@ -24,6 +25,10 @@ export const routes: Routes = [
     {
         path : 'movie-list',
         component: MoviesListComponent,
+    },
+    {
+        path : 'movie-list/:id',
+        component: MovieDetailsComponent,
     },
     {
         path : '**',

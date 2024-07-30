@@ -4,6 +4,7 @@ import { MoviesService } from '../movies.service';
 
 
 type movies = {
+  id : number;
   name: string;
   rating: number;
   summary: string;

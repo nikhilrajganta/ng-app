@@ -11,6 +11,9 @@
         <!-- <button class="delBtn" (click)="deletefunc()" mat-fab>
           <mat-icon>delete</mat-icon>
         </button> -->
+        <button class="infobtn" [routerLink]="['/movie-list', movies.id]">
+          Info
+        </button>
       </h4>
       <h3>⭐{{ movies.rating }}</h3>
     </div>
