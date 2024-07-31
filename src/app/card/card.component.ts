@@ -10,6 +10,7 @@ import { RouterLink } from '@angular/router';
 
 type movies = {
   id : number;
+  trailer : string;
   name: string;
   rating: number;
   summary: string;
@@ -30,6 +31,7 @@ export class CardComponent {
   
   @Input() movies : any = {
     "id" : '',
+    "trailer" : '',
     "name": "Vikram",
     "poster": "https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg",
     "rating": 8.4,

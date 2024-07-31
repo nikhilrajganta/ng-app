@@ -6,3 +6,12 @@
     padding: 28px;
     // content-visibility: hidden;
 }
+
+.load {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #333;
+  }

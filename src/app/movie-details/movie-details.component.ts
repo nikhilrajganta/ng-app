@@ -18,5 +18,4 @@ export class MovieDetailsComponent {
     const id = this.route.snapshot.paramMap.get('id') ||  0;
     this.movie = this.moviesService.getMovieById(+id);
   }
-
 }

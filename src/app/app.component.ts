@@ -7,6 +7,17 @@ import { MoviesListComponent } from './movies-list/movies-list.component';
 import { CounterComponent } from "./counter/counter.component";
 import { ColorGameComponent } from "./color-game/color-game.component";
 
+
+
+export interface movies {
+  id: number;
+  name: string;
+  poster: string;
+  rating: number;
+  summary: string;
+  trailer: string;
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,

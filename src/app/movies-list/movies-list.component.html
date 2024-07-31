@@ -1,5 +1,8 @@
 <div class="movie-list-container">
-  @for (movie of movieService.moviesData; track $index) {
-  <app-card [movies]="movie" (deleteItemEvent)="deleteMovie($event)"></app-card>
+  @if(isLoading){
+  <h1 class="load">Loading...</h1>
+  } @for (movie of movieList; track $index){
+  <!-- @for (movie of movieService.moviesData; track $index) { -->
+  <app-card [movies]="movie" (deleteItemEvent)="deleteMovie(movie)"></app-card>
   }
 </div>

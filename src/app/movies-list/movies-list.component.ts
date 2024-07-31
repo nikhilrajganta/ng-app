@@ -9,6 +9,7 @@ type movies = {
   rating: number;
   summary: string;
   poster: string;
+  trailer : string;
 };
 
 @Component({
@@ -19,15 +20,30 @@ type movies = {
   styleUrl: './movies-list.component.scss'
 })
 export class MoviesListComponent {
+  movieList: Array<movies> = []; // Model -> View
+  isLoading: boolean = true;
+  msg = '';
 
   constructor(public movieService : MoviesService){}
 
+  ngOnInit() {
+    this.movieService
+      .getAllMoviesP()
+      .then((data) => {
+        this.movieList = data;
+        this.isLoading = false;
+      })
+      .catch(() => {
+        this.isLoading = false;
+        this.msg = 'Something went wrong 🥲';
+      });
+    }
 
-deleteMovie(movie:movies ) {
+deleteMovie(movie:movies) {
   const index = this.movieService.moviesData.indexOf(movie);
   if (index !== -1) {
     this.movieService.moviesData.splice(index, 1);
   }
 }
-}
 
+}
