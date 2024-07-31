@@ -101,6 +101,13 @@ export class MoviesService {
   }
 
 
+  deletefun(movie:movies){
+    return fetch((`https://669a42a59ba098ed61fef807.mockapi.io/movies/${movie.id}`),{method:"DELETE"}).then(
+      (res) => res.json()
+    );
+  }
+
+
 
   constructor() { }
 }

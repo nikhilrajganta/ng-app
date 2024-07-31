@@ -40,10 +40,17 @@ export class MoviesListComponent {
     }
 
 deleteMovie(movie:movies) {
-  const index = this.movieService.moviesData.indexOf(movie);
-  if (index !== -1) {
-    this.movieService.moviesData.splice(index, 1);
-  }
+  // const index = this.movieService.moviesData.indexOf(movie);
+  // if (index !== -1) {
+  //   this.movieService.moviesData.splice(index, 1);
+  // }
+  this.movieService.deletefun(movie).then(()=>{
+    this.movieService
+      .getAllMoviesP()
+      .then((data) => {
+        this.movieList = data;
+        this.isLoading = false;
+      })
+  })
 }
-
 }
